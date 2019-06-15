@@ -28,7 +28,7 @@
 				}else{
 					$mensaje .= "Cantidad incorrecto ". $cantidad . "<br>";
 				}
-				
+
 				if(!isset($_SESSION['CARRITO'])){
 					$producto = array(
 						'ID' => $ID,
@@ -38,17 +38,17 @@
 					);
 					$_SESSION['CARRITO'][0] = $producto;
 					$mensaje = "Producto correctamente agregado";
-					
+
 				}else{
 					$idProductos = array_column($_SESSION['CARRITO'], "ID");
-					
+
 					if(in_array($ID, $idProductos)){
 							echo "<script>alert('Este producto ya se encuentra en el carrito')</script>";
-						
+
 							$key = array_search($ID, $idProductos);
 							$_SESSION['CARRITO'][$key]['cantidad']++;
-							
-						
+
+
 							$mensaje = "Este producto ya se encuentra en el carro de compras";
 					}else{
 						$numeroProductos = count($_SESSION['CARRITO']);
@@ -61,20 +61,20 @@
 					$_SESSION['CARRITO'][$numeroProductos] = $producto;
 					$mensaje = "Producto correctamente agregado";
 					}
-				
 
-				
+//GIT PRUEBA asd
+
 				}
 //				$mensaje = print_r($_SESSION, true) . "<br>";
 			break;
 			case 'Eliminar':
-				
+
 				if(is_numeric(openssl_decrypt($_POST['id'], COD, KEY))){
 					$ID = openssl_decrypt($_POST['id'], COD, KEY);
 					foreach($_SESSION['CARRITO'] as $indice => $producto){
 						if($producto['ID'] == $ID){
 							unset($_SESSION['CARRITO'][$indice]);
-							
+
 							echo "<script> alert('Elemento borrado con exito'); </script>";
 						}
 					}
