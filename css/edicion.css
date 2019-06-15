@@ -1,0 +1,134 @@
+*{
+	margin: 0;
+}
+body{
+	font-family: Open Sans, sans-serif;
+}
+
+.root{
+	display: grid;
+}
+
+.bodycon{
+	padding: 20px;
+	margin: 20px;
+	margin-left: 130px;
+}
+.nav{
+	height: 100px;
+	background: black;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	justify-items: center;
+	align-items: center;
+	
+}
+.boxlogo{
+	
+	border-right: 2px solid red;
+	width: 200px;
+	background: black;
+	margin-left: -160px;
+}
+.boxlogo img{
+	
+	max-width: 120px;
+}
+.boxlinks a{
+	margin-left: 60px;
+	text-decoration: none;
+	color: white;
+	font-size: 16px;
+	font-weight: 700;
+	
+}
+
+.boxiconos i{
+	font-size: 20px;
+	color: white;
+	margin-left: 300px;
+}
+.boxes img{
+	min-width: 150px;
+	max-width: 150px;
+}
+.productos{
+	
+	margin-top: 40px;
+	display: grid;
+	grid-column-gap: 2px;
+	grid-row-gap: 40px;
+	grid-template-columns: 1fr 1fr 1fr;
+	justify-content: center;
+	justify-items: center;
+}
+.boxes{
+	padding: 20px;
+	justify-items: center;
+	text-align: center;
+	
+	border: 1px solid grey;
+	display: grid;
+	grid-template-rows: 170px 30px 30px 30px;
+}
+form input{
+	display: block;
+}
+.boxes h3{
+	margin-top: 5px;
+	color: #BF2354;
+}
+.boxes p{
+	margin-top: 10px;
+}
+.addbuton{
+	text-align: center;
+	background: dodgerblue;
+	border: none;
+	padding: 6px;
+}
+.addtag{
+	margin-top: 30px;
+	text-align: center;
+	background: #28a745;
+	display: inline-block;
+	font-size: 18px;
+	width: 120px;
+	padding: 5px;
+	
+	text-decoration: none;
+	color: white;
+}
+
+table{
+	display: block;
+	border-collapse: collapse;
+	width: 800px;
+}
+th{
+	text-align: left;
+}
+.tdtotal{
+	text-align-last: center;
+}
+
+table td, table th{
+	border: 1px solid grey;
+	padding: 8px;
+}
+
+.formacontacto{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+}
+
+.formacontacto input{
+	margin-top: 10px;
+	width: 250px;
+	height: 25px;
+}
+.formacontacto select{
+	margin-top: 10px;
+	height: 35px;
+	width: 250px;
+}
